@@ -1,0 +1,33 @@
+.verify-layout {
+  max-width: 560px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.verify-form { padding: 26px; }
+
+.verify-result-card { padding: 24px; }
+.verify-status-valid, .verify-status-invalid {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 14px;
+}
+.verify-status-valid { color: var(--teal-dark); }
+.verify-status-invalid { color: var(--red); }
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.92rem;
+  gap: 12px;
+}
+.summary-row:last-child { border-bottom: none; }
+.summary-row .label { color: var(--text-muted); }
+.summary-row .value { font-weight: 600; color: var(--ink); text-align: right; }

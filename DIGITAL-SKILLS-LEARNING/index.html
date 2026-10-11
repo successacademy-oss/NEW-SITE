@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Success Academy Tech Digital Skills Learning — Login or Create Account</title>
+  <meta name="description"
+    content="Learn practical digital skills online: Word, Excel, PowerPoint, Web Development, Graphic Design and more.">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#132A46">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="site-header">
+    <nav class="nav">
+      <a href="index.html" class="brand">
+        <span class="brand-mark">SAT</span>
+        <span>Success Academy Tech Digital Skills Learning</span>
+      </a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="auth-hero">
+      <div class="container auth-layout">
+        <div class="auth-intro">
+          <p class="eyebrow-free">Practical digital skills, taught simply</p>
+          <h1>Learn skills you can actually use — Word, Excel, design, web development and more.</h1>
+          <p>Built for secondary school students and graduates who want real, job-ready digital skills. Create a free
+            account to register for a course and start learning.</p>
+          <ul class="auth-points">
+            <li>9 practical courses, from Microsoft Office to Web Development</li>
+            <li>Learn module by module, at your own pace</li>
+            <li>Pay through WhatsApp — no card needed</li>
+            <li>Earn a certificate when you finish</li>
+          </ul>
+        </div>
+
+        <div class="auth-card card">
+          <div class="auth-tabs" role="tablist">
+            <button class="auth-tab active" id="tab-login" role="tab" aria-selected="true">Log In</button>
+            <button class="auth-tab" id="tab-create" role="tab" aria-selected="false">Create Account</button>
+          </div>
+
+          <!-- LOGIN FORM -->
+          <form id="login-form" class="auth-form" novalidate>
+            <div class="field" id="login-email-field">
+              <label for="login-email">Email Address</label>
+              <input type="email" id="login-email" name="email" autocomplete="email" required>
+              <p class="field-error"></p>
+            </div>
+            <div class="field" id="login-password-field">
+              <label for="login-password">Password</label>
+              <div class="password-wrap">
+                <input type="password" id="login-password" name="password" autocomplete="current-password" required>
+                <button type="button" class="password-toggle" id="login-password-toggle">Show</button>
+              </div>
+              <p class="field-error"></p>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Log In</button>
+            <p class="muted text-center auth-switch">New here? <button type="button" class="link-btn"
+                id="switch-to-create">Create an account</button></p>
+          </form>
+
+          <!-- CREATE ACCOUNT FORM -->
+          <form id="create-form" class="auth-form" novalidate hidden>
+            <div class="field" id="create-name-field">
+              <label for="create-name">Full Name</label>
+              <input type="text" id="create-name" name="fullName" autocomplete="name" required>
+              <p class="field-error"></p>
+            </div>
+            <div class="field" id="create-email-field">
+              <label for="create-email">Email Address</label>
+              <input type="email" id="create-email" name="email" autocomplete="email" required>
+              <p class="field-error"></p>
+            </div>
+            <div class="field" id="create-phone-field">
+              <label for="create-phone">Phone Number</label>
+              <input type="tel" id="create-phone" name="phone" autocomplete="tel" placeholder="e.g. 08012345678"
+                required>
+              <p class="field-error"></p>
+            </div>
+            <div class="field" id="create-password-field">
+              <label for="create-password">Password</label>
+              <div class="password-wrap">
+                <input type="password" id="create-password" name="password" autocomplete="new-password" required
+                  minlength="6">
+                <button type="button" class="password-toggle" id="create-password-toggle">Show</button>
+              </div>
+              <p class="field-error"></p>
+            </div>
+            <div class="field" id="create-confirm-field">
+              <label for="create-confirm">Confirm Password</label>
+              <div class="password-wrap">
+                <input type="password" id="create-confirm" name="confirmPassword" autocomplete="new-password" required
+                  minlength="6">
+                <button type="button" class="password-toggle" id="create-confirm-toggle">Show</button>
+              </div>
+              <p class="field-error"></p>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+            <p class="muted text-center auth-switch">Already have an account? <button type="button" class="link-btn"
+                id="switch-to-login">Log in</button></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+
+  <script src="js/app.js"></script>
+  <script src="js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+.cert-wrap {
+  padding: 40px 0 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.cert-actions { display: flex; gap: 10px; }
+
+.certificate {
+  width: 100%;
+  max-width: 900px;
+  aspect-ratio: 297 / 210; /* A4 landscape */
+  background: #FFFDF8;
+  border: 3px solid var(--ink);
+  outline: 8px solid var(--gold);
+  outline-offset: -18px;
+  border-radius: 6px;
+  padding: 48px 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+.cert-brand {
+  font-family: var(--font-head);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--ink);
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+.cert-title {
+  font-family: var(--font-head);
+  font-size: clamp(1.4rem, 3.4vw, 2.1rem);
+  color: var(--ink);
+  margin-bottom: 18px;
+}
+.cert-presented { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 6px; }
+.cert-name {
+  font-family: var(--font-head);
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  color: var(--gold-dark);
+  margin-bottom: 14px;
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 10px;
+  min-width: 60%;
+}
+.cert-for { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 4px; }
+.cert-course {
+  font-family: var(--font-head);
+  font-size: clamp(1.1rem, 2.4vw, 1.5rem);
+  color: var(--ink);
+  margin-bottom: 22px;
+}
+.cert-footer-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: auto;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.cert-footer-item { text-align: center; }
+.cert-footer-item .line { border-top: 1px solid var(--ink); margin-bottom: 4px; padding-top: 4px; min-width: 160px; }
+.cert-footer-item .cap { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+.cert-id { position: absolute; bottom: 10px; right: 16px; font-size: 0.7rem; color: var(--text-muted); }
+
+@media (max-width: 700px) {
+  .certificate { aspect-ratio: auto; padding: 28px 20px; }
+}
+
+@media print {
+  .no-print, .cert-actions { display: none !important; }
+  body { background: #fff; }
+  .cert-wrap { padding: 0; }
+  .certificate { border: 3px solid #000; outline-color: #C9871F; box-shadow: none; }
+}

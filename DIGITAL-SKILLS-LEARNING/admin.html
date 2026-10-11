@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin — Success Academy Tech Digital Skills Learning</title>
+<link rel="icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">SAT</span>
+      <span>Success Academy Tech Digital Skills Learning — Admin</span>
+    </a>
+    <div id="admin-nav-actions"></div>
+  </nav>
+</header>
+
+<main id="main">
+  <!-- ADMIN LOGIN -->
+  <section class="admin-login-wrap" id="admin-login-section" hidden>
+    <div class="container">
+      <div class="card admin-login-card">
+        <h1>Admin Login</h1>
+        <p class="muted">Restricted area. Students should not use this page.</p>
+        <form id="admin-login-form" novalidate>
+          <div class="field" id="admin-username-field">
+            <label for="admin-username">Username</label>
+            <input type="text" id="admin-username" autocomplete="username" required>
+            <p class="field-error"></p>
+          </div>
+          <div class="field" id="admin-password-field">
+            <label for="admin-password">Password</label>
+            <div class="password-wrap">
+              <input type="password" id="admin-password" autocomplete="current-password" required>
+              <button type="button" class="password-toggle" id="admin-password-toggle">Show</button>
+            </div>
+            <p class="field-error"></p>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Log In as Admin</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ADMIN DASHBOARD -->
+  <section id="admin-dashboard-section" hidden>
+    <div class="page-hero container">
+      <h1>Admin Dashboard</h1>
+      <p>Verify payments, track training progress and issue certificates.</p>
+    </div>
+
+    <div class="container">
+      <div class="stat-grid" id="admin-stat-grid"></div>
+
+      <div class="admin-tabs" role="tablist">
+        <button class="admin-tab active" data-tab="students">Students</button>
+        <button class="admin-tab" data-tab="registrations">Course Registrations</button>
+        <button class="admin-tab" data-tab="payments">Payments</button>
+        <button class="admin-tab" data-tab="progress">Training Progress</button>
+        <button class="admin-tab" data-tab="certificates">Certificates</button>
+      </div>
+
+      <div id="admin-panel" class="section"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" id="site-footer"></footer>
+
+<script src="js/app.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

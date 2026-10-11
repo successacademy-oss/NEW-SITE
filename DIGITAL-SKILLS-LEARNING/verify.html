@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verify Certificate — Success Academy Tech Digital Skills Learning</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#132A46">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/verify.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header" id="site-header"></header>
+
+<main id="main">
+  <section class="page-hero">
+    <div class="container">
+      <h1>Verify a certificate</h1>
+      <p>Enter a Success Academy Tech Digital Skills Learning certificate ID to confirm it's genuine.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container verify-layout">
+      <form class="card verify-form" id="verify-form" novalidate>
+        <div class="field" id="cert-id-field">
+          <label for="cert-id-input">Certificate ID</label>
+          <input type="text" id="cert-id-input" placeholder="e.g. DSL-A1B2C3D4" autocomplete="off">
+          <p class="field-error"></p>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Verify Certificate</button>
+      </form>
+
+      <div id="verify-result"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" id="site-footer"></footer>
+
+<script src="js/app.js"></script>
+<script src="js/verify.js"></script>
+</body>
+</html>

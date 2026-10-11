@@ -1,0 +1,8 @@
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+}
+.contact-card { padding: 24px; }
+.contact-card h3 { margin-bottom: 6px; }
+.contact-wa { grid-column: span 1; }

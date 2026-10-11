@@ -1,0 +1,69 @@
+.admin-login-wrap {
+  min-height: calc(100vh - 130px);
+  display: flex;
+  align-items: center;
+}
+.admin-login-card { max-width: 420px; margin: 0 auto; padding: 30px; width: 100%; }
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 14px;
+  margin: 24px 0;
+}
+.stat-grid .card { padding: 16px 18px; }
+.stat-grid .stat-value { font-family: var(--font-head); font-size: 1.6rem; font-weight: 700; color: var(--ink); }
+.stat-grid .stat-label { font-size: 0.78rem; color: var(--text-muted); font-weight: 600; }
+
+.admin-tabs {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 4px;
+}
+.admin-tab {
+  background: transparent;
+  border: none;
+  padding: 10px 16px;
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  font-weight: 600;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+.admin-tab.active { background: var(--ink); color: #fff; }
+
+.admin-table-wrap { overflow-x: auto; }
+table.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  min-width: 640px;
+}
+table.admin-table th, table.admin-table td {
+  padding: 12px 14px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.86rem;
+  vertical-align: middle;
+}
+table.admin-table th {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+table.admin-table tr:last-child td { border-bottom: none; }
+table.admin-table select {
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  font-size: 0.82rem;
+}
+.admin-progress-cell { min-width: 160px; }
+.admin-progress-cell input[type="range"] { width: 110px; vertical-align: middle; }
